@@ -1,5 +1,6 @@
 package ru.job4j.calculator;
 
+import java.util.*;
 public class Fit {
 
     public static double manWeight(double height) {
@@ -17,9 +18,11 @@ public class Fit {
         double in = 185.00;
         double man = Fit.manWeight(in);
         System.out.println("Man 185 is " + man);
-        in = 160;
+        System.out.println("Введите рост девушки:");
+        Scanner s = new Scanner(System.in);
+        in = s.nextDouble();
         double woman = Fit.womanWeight(in);
-        System.out.println("Woman 160 is " + woman);
+        System.out.println("Женщина ростом " + in + " см " + " : " + woman + " кг.");
     }
 
 }
